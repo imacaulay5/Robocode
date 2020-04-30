@@ -65,10 +65,10 @@ public class AdvancedBoomBot extends AdvancedRobot
 		
 		// Calculate predicted shot angle
 		double predictedBearing = calculateShotAngle( xPosition,
-												yPosition,
-												enemyVelocity,
-												enemyHeading,
-												bulletSpeed);
+								yPosition,
+								enemyVelocity,
+								enemyHeading,
+								bulletSpeed);
 												
 		// Calculate predicted bearing from gun heading					
 		double bearingFromGun = Utils.normalRelativeAngle(predictedBearing - getGunHeadingRadians());
@@ -91,7 +91,7 @@ public class AdvancedBoomBot extends AdvancedRobot
 	public double calculateShotAngle(double xPosition,
                                            double yPosition,
                                            double velocity,
-										   double enemyHeading,
+					   double enemyHeading,
                                            double projectileSpeed)
     {
 		// Initialize vectors
@@ -129,7 +129,7 @@ public class AdvancedBoomBot extends AdvancedRobot
         double yPredicted = yPosition;
         double distanceProjectile = 0;
         int time = 0;
-		// Calculate distance using Pythagorean Theorem
+	// Calculate distance using Pythagorean Theorem
         double distanceTarget = Math.sqrt((xPosition * xPosition) + (yPosition * yPosition));
 
         // While loop (distance bullet per time stamp)
@@ -146,9 +146,9 @@ public class AdvancedBoomBot extends AdvancedRobot
             distanceTarget = Math.sqrt((xPredicted * xPredicted) + (yPredicted * yPredicted));
         }
         // Initialize bearing variable
-		double bearing = Utils.normalAbsoluteAngle(Math.atan2(xPredicted - getX(),yPredicted - getY()));
+	double bearing = Utils.normalAbsoluteAngle(Math.atan2(xPredicted - getX(),yPredicted - getY()));
 
-		return bearing;
+	return bearing;
 	}
 	
 	/*
