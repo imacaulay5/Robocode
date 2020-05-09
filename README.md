@@ -1,10 +1,14 @@
-# myFirstRobot
-My First Complete Robot in Robocode
+# Robocode
+My Robots in Robocode
 
 Project in Computer Science II course
 
-Targeting:
-Predictive Linear Targeting
+AdvancedBoomBot:
+-Extends AdvancedRobot
+-Predictive Linear Targeting
+-Random Movement
 
-Movement:
-Random
+BoomBot:
+-Extends Robot
+-Predictive Linear Targeting
+-Random Movement
